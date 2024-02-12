@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Chicken Market';
+    src: local('Chicken Market'), local('ChickenMarketRegular'),
+        url('ChickenMarketRegular.woff2') format('woff2'),
+        url('ChickenMarketRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
