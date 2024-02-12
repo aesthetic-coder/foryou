@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><3</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <div class="container">
+	<h1>Sooo..</h1> 
+</div> -->
+    <div class="test" contenteditable>
+      ㅤ
+
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="squiggly-0">
+            <feTurbulence
+              id="turbulence"
+              baseFrequency="0.02"
+              numOctaves="3"
+              result="noise"
+              seed="0"
+            />
+            <feDisplacementMap
+              id="displacement"
+              in="SourceGraphic"
+              in2="noise"
+              scale="6"
+            />
+          </filter>
+          <filter id="squiggly-1">
+            <feTurbulence
+              id="turbulence"
+              baseFrequency="0.02"
+              numOctaves="3"
+              result="noise"
+              seed="1"
+            />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+          </filter>
+
+          <filter id="squiggly-2">
+            <feTurbulence
+              id="turbulence"
+              baseFrequency="0.02"
+              numOctaves="3"
+              result="noise"
+              seed="2"
+            />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+          </filter>
+          <filter id="squiggly-3">
+            <feTurbulence
+              id="turbulence"
+              baseFrequency="0.02"
+              numOctaves="3"
+              result="noise"
+              seed="3"
+            />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+          </filter>
+
+          <filter id="squiggly-4">
+            <feTurbulence
+              id="turbulence"
+              baseFrequency="0.02"
+              numOctaves="3"
+              result="noise"
+              seed="4"
+            />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+          </filter>
+        </defs>
+      </svg>
+      <div class="container">
+        <div class="text"></div>
+      </div>
+
+      <!-- <div class="answer-question">
+        <button class="btn btn--yes"></button>
+        <button class="btn btn--no"></button>
+      </div> -->
+
+    </div>
+    <audio autoplay loop>
+      <source
+        src="./assets/Inez - My Love (Lyrics English).mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    
+<div class="box">
+
+        <button >  Yes 🤍</button>
+        
+        <button id="move" onmouseover="runaway(this)">No 🥰 </button>
+
+
+         <div class="modal-wrapper">
+     <div class="modal">
+         <div class="modal-close">X</div>
+         <div class="modal-content">
+             <h2>Hey there akku <3 </h2>
+                <br>
+             <p>Okay im typing this at exactly 8:53 pm. and im obviously panicking very much (I know this isnt that great) but besides that. I LOVE YOUU SO MUCHHH HEHEHEHE MWAHHHHH <33333333333 UR THE BESTTTT I SWEAR I COULDNT HAVE ASKED FOR ANYTHING BETTER THANK YOU FOR CHOOSING ME :DDDD</p>
+         </div>
+     </div>
+ </div>
+</div>
+
+
+<script>
+    function runaway(id) {
+    id.style.top = Math.round(Math.random() * 350) - 10 + 'px';
+    id.style.left = Math.round(Math.random() * 350) - 200 + 'px';
+}
+
+     let modal = document.querySelector('.modal-wrapper');
+     let btn = document.querySelector('button');
+     let close_btn = document.querySelector('.modal-close');
+
+     btn.addEventListener('click',display);
+
+    //  display the modal after 3 second of page load
+
+    setTimeout(()=>{
+        display();
+    },3000)
+
+     function display(){
+         modal.style.display = 'block';
+     }
+
+    //  when the user clicks on X button,close the modal
+    close_btn.addEventListener('click',hide);
+
+    // when user clicks anywhere outside the modal, close modal
+    window.addEventListener('click',(event)=>{
+        if(event.target == modal){
+            modal.style.display = 'none';
+        }
+    });
+
+    function hide(){
+        modal.style.display = 'none';
+
+    }
+
+</script>
+  </body>
+  <script src="./app.js"></script>
+</html>
